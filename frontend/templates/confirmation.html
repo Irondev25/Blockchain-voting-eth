@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
         body, html {font-family: "Raleway", sans-serif; height: 100%}
+        body {
+            background-image: url('../static/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
         p {font-size: 400%}
         button {
         background-color: rgb(19, 141, 255); /* Green */
@@ -25,7 +36,9 @@
 
     </style>
     <body>
-    <div style="height: 30%"></div>
+        <h1 style="text-align: center;">Indian Election 2021</h1>
+    <div class="container">
+        <div style="height: 30%"></div>
     <center><p>{{message}}
             {% if code==200 %}
                 <span style='color: green;'>&#10004;</span>
@@ -34,6 +47,7 @@
             {% endif %}
         </p>
     <button value="Back" onClick="window.location.href=window.location.href">back</button>
-    </center>    
+    </center>   
+    </div> 
     </body>
 </html>

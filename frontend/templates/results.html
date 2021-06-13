@@ -4,6 +4,18 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">  
 <style>
+  body, html {font-family: "Raleway", sans-serif; height: 100%; padding-left: 0.5%;}
+  body {
+            background-image: url('../static/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div.container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -24,24 +36,26 @@ p {font-size: 300%}
 </style>
 </head>
 <body>
-
-<center>
-<p>Results</p>
-
-<table>
-  <tr>
-    <th>Candidate ID</th>
-    <th>Candidate</th>
-    <th>Votes</th>
-  </tr>
-  {% for ele in result %}
-    <tr>
-      <td>{{ele[0]}}</td>
-      <td>{{ele[1]}}</td>
-      <td>{{ele[2]}}</td>
-    </tr>
-  {% endfor%}
-</table>
-</center>
+  <h1 style="text-align: center;">Indian Election 2021</h1>
+  <div class="container">
+    <center>
+      <p>Results</p>
+      
+      <table>
+        <tr>
+          <th>Candidate ID</th>
+          <th>Candidate</th>
+          <th>Votes</th>
+        </tr>
+        {% for ele in result %}
+          <tr>
+            <td>{{ele[0]}}</td>
+            <td>{{ele[1]}}</td>
+            <td>{{ele[2]}}</td>
+          </tr>
+        {% endfor%}
+      </table>
+      </center>
+  </div>
 </body>
 </html>
